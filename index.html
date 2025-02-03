@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portafolio - Alberto Ramírez Farfán</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <!-- Logo -->
+        <div class="logo" id="name-logo">
+            <span>&lt;</span>
+            <span>/</span>
+            <span>A</span><span>l</span><span>b</span><span>e</span><span>r</span><span>t</span><span>o</span>
+            <span>&nbsp;</span>
+            <span>R</span><span>a</span><span>m</span><span>í</span><span>r</span><span>e</span><span>z</span>
+            <span>&gt;</span>
+        </div>
+
+        <!-- Menú de Navegación -->
+        <nav class="nav-menu">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" data-key="home">Inicio</a></li>
+                <li><a href="#sobre-mi" data-key="about">Sobre Mí</a></li>
+                <li><a href="#proyectos" data-key="projects">Proyectos</a></li>
+                <li><a href="#contacto" data-key="contact">Contacto</a></li>
+            </ul>
+
+            <!-- Botón de Cambio de Idioma -->
+            <div class="language-switcher">
+                <img src="assets/images/spain-flag.png" alt="Seleccionar idioma" />
+                <div class="dropdown">
+                    <img class="flag" src="assets/images/spain-flag.png" alt="Español" data-lang="es" />
+                    <img class="flag" src="assets/images/uk-flag.png" alt="English" data-lang="en" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="static-text">¡Bienvenido 👋, soy</p>
+                <h1 class="dynamic-name">Alberto Ramírez Farfán</h1>
+                <h2 class="dynamic-text" id="dynamic-text">Desarrollador de Software</h2>
+
+                <div class="social-icons">
+                    <div class="icon-container">
+                        <a href="https://github.com/businessrfalberto" target="_blank">
+                            <img src="assets/images/github.png" alt="GitHub" />
+                        </a>
+                        <p class="icon-label">GitHub</p>
+                    </div>
+                
+                    <div class="icon-container">
+                        <a href="https://www.linkedin.com/in/alberto-ram%C3%ADrez-farf%C3%A1n-7662381b1" target="_blank">
+                            <img src="assets/images/linkedin.png" alt="LinkedIn" />
+                        </a>
+                        <p class="icon-label">LinkedIn</p>
+                    </div>
+                
+                    <div class="icon-container">
+                        <a href="https://instagram.com/businessrfalberto" target="_blank">
+                            <img src="assets/images/instagram.png" alt="Instagram" />
+                        </a>
+                        <p class="icon-label">Instagram</p>
+                    </div>
+                
+                    <div class="icon-container">
+                        <a href="assets/cv.pdf" target="_blank">
+                            <img src="assets/images/cv.png" alt="Currículum" />
+                        </a>
+                        <p class="icon-label">Currículum</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="section">
+            <h2>Sobre Mí</h2>
+            <p>Soy estudiante de Ingeniería de Software en la Universidad de Oviedo, con interés en ciberseguridad,
+                desarrollo de aplicaciones y proyectos de software innovadores.</p>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="proyectos" class="section">
+            <h2>Proyectos Destacados</h2>
+            <p>Aquí irán los proyectos más importantes en los que he trabajado.</p>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <p>¿Quieres ponerte en contacto conmigo? Aquí tienes mis datos.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hacer scroll suave a la sección de Inicio al cargar la página
+            const inicioSection = document.getElementById('inicio');
+            inicioSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    
+</body>
+
+</html>

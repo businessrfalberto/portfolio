@@ -1,0 +1,304 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4a4a4a;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo con animación */
+#name-logo {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    cursor: default;
+    display: flex;
+    gap: 3px;
+}
+
+#name-logo span {
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#name-logo span:hover {
+    color: #66b3ff;
+    transform: translateY(-5px);
+}
+
+/* Menú de Navegación */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    white-space: nowrap;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover {
+    color: #00aaff;
+}
+
+/* Botón de Cambio de Idioma */
+.language-switcher {
+    position: relative;
+    cursor: pointer;
+}
+
+.language-switcher img {
+    width: 30px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    border: 1px solid white;
+    padding: 5px 0;
+    border-radius: 4px;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.language-switcher:hover .dropdown,
+.dropdown:hover {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown .flag {
+    width: 30px;
+    height: 20px;
+    margin: 2px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.dropdown .flag:hover {
+    transform: scale(1.1);
+}
+
+/* Sección de Inicio */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #4a4a4a;
+    color: white;
+    padding: 10px 20px;  /* Reducido aún más el espacio */
+    min-height: 70vh;    /* Altura mínima más pequeña */
+    margin: 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0;
+}
+
+/* Texto Estático */
+.static-text {
+    font-size: 18px;
+    margin: 0;
+    color: #ccc;
+}
+
+/* Nombre Principal */
+.dynamic-name {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5px 0;
+}
+
+/* Texto Dinámico */
+.dynamic-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #f4f4f4;
+    margin: 5px 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Iconos de Redes Sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5px;  /* Menor espacio superior */
+}
+
+/* Contenedor de cada icono */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;  /* Menor espacio entre icono y texto */
+}
+
+/* Iconos */
+.icon-container img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.icon-container img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* Leyenda debajo de los iconos */
+.icon-label {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Otras Secciones */
+.section {
+    max-width: 800px;
+    margin: 5px auto;  /* Aún menos espacio entre secciones */
+    background-color: #5a5a5a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Reducción del espacio entre Inicio y Sobre Mí */
+#inicio + #sobre-mi {
+    margin-top: 5px;  /* Espacio mínimo */
+}
+
+/* Títulos y Subtítulos */
+h1, h2, p {
+    margin: 3px 0;  /* Espacios más pequeños entre textos */
+}
+
+/* Estilos para pantallas de hasta 768px (móviles y tablets en modo vertical) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Menú de navegación en columna */
+        padding: 10px;
+    }
+
+    #name-logo {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Enlaces uno debajo del otro */
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .language-switcher {
+        margin-top: 10px; /* Espacio entre el menú y el selector de idioma */
+    }
+
+    .hero-content {
+        max-width: 90%;  /* Para que no esté tan ajustado */
+        padding: 10px;
+    }
+
+    .dynamic-name {
+        font-size: 32px; /* Texto más pequeño para móviles */
+    }
+
+    .dynamic-text {
+        font-size: 20px;
+    }
+
+    .social-icons {
+        gap: 15px; /* Menos espacio entre iconos */
+    }
+
+    .icon-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section {
+        margin: 5px 10px; /* Reduce márgenes para mejor uso del espacio */
+        padding: 10px;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .dynamic-name {
+        font-size: 26px;
+    }
+
+    .dynamic-text {
+        font-size: 18px;
+    }
+
+    .nav-links li a {
+        font-size: 16px;
+    }
+
+    .icon-container img {
+        width: 35px;
+        height: 35px;
+    }
+}
