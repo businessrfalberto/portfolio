@@ -28,10 +28,12 @@
         <!-- Menú de Navegación -->
         <nav class="nav-menu">
             <ul class="nav-links" id="nav-links">
-                <li><a href="#inicio" data-key="home">Inicio</a></li>
+                <li><a href="#inicio" data-key="inicio">Inicio</a></li>
                 <li><a href="#sobre-mi" data-key="about">Sobre Mí</a></li>
+                <li><a href="#experiencia" data-key="experience">Experiencia</a></li>
                 <li><a href="#proyectos" data-key="projects">Proyectos</a></li>
                 <li><a href="#contacto" data-key="contact">Contacto</a></li>
+
             </ul>
 
             <!-- Botón de Cambio de Idioma -->
@@ -50,7 +52,7 @@
         <!-- Sección de Inicio -->
         <section id="inicio" class="hero">
             <div class="hero-content">
-                <p class="static-text">¡Bienvenido 👋, soy</p>
+                <p class="static-text" data-key="welcome">Bienvenido 👋, soy</p>
                 <h1 class="dynamic-name">Alberto Ramírez Farfán</h1>
                 <h2 class="dynamic-text" id="dynamic-text">Desarrollador de Software</h2>
 
@@ -77,7 +79,7 @@
                     </div>
                 
                     <div class="icon-container">
-                        <a href="docs/mi_curriculum.pdf" target="_blank" download="Curriculum_Alberto_Ramirez_Farfan.pdf">
+                        <a href="assets/docs/holamundo.pdf" target="_blank" download="Curriculum_Alberto_Ramirez_Farfan.pdf">
                             <img src="assets/images/cv.png" alt="Currículum" />
                         </a>
                         <p class="icon-label">Currículum</p>
@@ -88,24 +90,27 @@
             </div>
         </section>
 
-        <!-- Sección Sobre Mí -->
+
         <section id="sobre-mi" class="section">
-            <h2>Sobre Mí</h2>
-            <p>Soy estudiante de Ingeniería de Software en la Universidad de Oviedo, con interés en ciberseguridad,
-                desarrollo de aplicaciones y proyectos de software innovadores.</p>
+            <h2 data-key="about">Sobre Mí</h2>
+            <p data-key="aboutMeText">Contenido sobre mí...</p>
         </section>
 
-        <!-- Sección de Proyectos -->
+        <section id="experiencia" class="section">
+            <h2 data-key="experience">Experiencia</h2>
+            <p data-key="experienceText">Contenido de experiencia...</p>
+        </section>
+        
         <section id="proyectos" class="section">
-            <h2>Proyectos Destacados</h2>
-            <p>Aquí irán los proyectos más importantes en los que he trabajado.</p>
+            <h2 data-key="projects">Proyectos</h2>
+            <p data-key="projectsText">Contenido de proyectos...</p>
         </section>
-
-        <!-- Sección de Contacto -->
+        
         <section id="contacto" class="section">
-            <h2>Contacto</h2>
-            <p>¿Quieres ponerte en contacto conmigo? Aquí tienes mis datos.</p>
+            <h2 data-key="contact">Contacto</h2>
+            <p data-key="contactText">Contenido de contacto...</p>
         </section>
+        
     </main>
 
     <script src="script.js"></script>

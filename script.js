@@ -6,39 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSwitcherContainer = document.querySelector('.language-switcher'); // Contenedor de la bandera principal
 
     const translations = {
-        es: {
-            home: "Inicio",
-            about: "Sobre Mí",
-            projects: "Proyectos",
-            contact: "Contacto",
-            welcome: "¡Bienvenido 👋, soy",
-            dynamicPhrases: [
-                "Desarrollador de Software",
-                "Apasionado por la Ciberseguridad",
-                "Ingeniero de Software en Formación",
-                "Construyendo Proyectos Innovadores"
-            ],
-            aboutMeText: "Soy estudiante de Ingeniería de Software en la Universidad de Oviedo, con interés en ciberseguridad, desarrollo de aplicaciones y proyectos de software innovadores.",
-            projectsText: "Aquí irán los proyectos más importantes en los que he trabajado.",
-            contactText: "¿Quieres ponerte en contacto conmigo? Aquí tienes mis datos."
+        'es': {
+            'inicio': 'Inicio',
+            'experience': 'Experiencia',
+            'about': 'Sobre Mí',
+            'projects': 'Proyectos',
+            'contact': 'Contacto',
+            'welcome': 'Bienvenido 👋, soy',
+            'aboutMeText': 'Contenido sobre mí...',
+            'projectsText': 'Contenido de proyectos...',
+            'contactText': 'Contenido de contacto...',
+            'experienceText': 'Contenido de experiencia...',
+            'dynamicPhrases': ['Desarrollador de Software', 'Apasionado por la Ciberseguridad']
         },
-        en: {
-            home: "Home",
-            about: "About Me",
-            projects: "Projects",
-            contact: "Contact",
-            welcome: "Welcome 👋, I am",
-            dynamicPhrases: [
-                "Software Developer",
-                "Passionate About Cybersecurity",
-                "Software Engineering Student",
-                "Building Innovative Projects"
-            ],
-            aboutMeText: "I am a Software Engineering student at the University of Oviedo, interested in cybersecurity, app development, and innovative software projects.",
-            projectsText: "Here are the most important projects I've worked on.",
-            contactText: "Want to get in touch with me? Here are my details."
+        'en': {
+            'inicio': 'Home',
+            'experience': 'Experience',
+            'about': 'About Me',
+            'projects': 'Projects',
+            'contact': 'Contact',
+            'welcome': 'Welcome 👋, I am',
+            'aboutMeText': 'About me content...',
+            'projectsText': 'Projects content...',
+            'contactText': 'Contact content...',
+            'experienceText': 'Experience content...',
+            'dynamicPhrases': ['Software Developer', 'Passionate about Cybersecurity']
         }
     };
+    
+
 
     let currentLanguage = 'es';
     let phraseIndex = 0;
@@ -57,32 +53,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para cambiar el idioma y cerrar el menú desplegable
     function switchLanguage(selectedLang, selectedFlag) {
-        if (currentLanguage !== selectedLang) {
-            currentLanguage = selectedLang;
+        currentLanguage = selectedLang;
 
-            // Actualizar los textos del menú de navegación
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                const key = link.dataset.key;
+        // Cambiar textos de los enlaces de navegación
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            const key = link.dataset.key;
+            if (translations[currentLanguage][key]) {
                 link.textContent = translations[currentLanguage][key];
-            });
+            }
+        });
 
-            // Cambiar textos estáticos
-            document.querySelector('.static-text').textContent = translations[currentLanguage].welcome;
-            document.getElementById('sobre-mi').querySelector('p').textContent = translations[currentLanguage].aboutMeText;
-            document.getElementById('proyectos').querySelector('p').textContent = translations[currentLanguage].projectsText;
-            document.getElementById('contacto').querySelector('p').textContent = translations[currentLanguage].contactText;
+        // Traducir todos los elementos que tengan data-key
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.dataset.key;
+            if (translations[currentLanguage][key]) {
+                console.log(`Cambiando ${key} a: ${translations[currentLanguage][key]}`);
+                element.textContent = translations[currentLanguage][key];
+            }
+        });
 
-            // Reiniciar el texto dinámico
-            phraseIndex = 0;
-            dynamicText.textContent = translations[currentLanguage].dynamicPhrases[phraseIndex];
-
-            // Cambiar la bandera del botón principal
-            currentFlag.src = selectedFlag.src;
+        // Traducir el texto de bienvenida (¡Bienvenido 👋, soy)
+        const staticText = document.querySelector('.static-text');
+        if (staticText && translations[currentLanguage]['welcome']) {
+            staticText.textContent = translations[currentLanguage]['welcome'];
         }
+
+        // Reiniciar el texto dinámico
+        phraseIndex = 0;
+        dynamicText.textContent = translations[currentLanguage].dynamicPhrases[phraseIndex];
+
+        // Cambiar la bandera del botón principal
+        currentFlag.src = selectedFlag.src;
 
         // Cerrar el menú desplegable después de hacer clic
         dropdown.style.display = 'none';
     }
+
+
 
     // Evento para cada bandera en el desplegable
     languageSwitcher.forEach(flag => {
@@ -103,20 +110,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.getElementById('download-cv').addEventListener('click', function () {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    doc.setFontSize(22);
-    doc.text("Currículum Vitae", 20, 20);
-
-    doc.setFontSize(14);
-    doc.text("Nombre: Alberto Ramírez Farfán", 20, 40);
-    doc.text("Correo: alberto@example.com", 20, 50);
-    doc.text("Teléfono: +34 123 456 789", 20, 60);
-    doc.text("Experiencia:", 20, 80);
-    doc.text("- Desarrollador de Software en proyectos web.", 30, 90);
-    doc.text("- Estudiante de Ingeniería de Software en la Universidad de Oviedo.", 30, 100);
-
-    doc.save('holamundo.pdf');
-});

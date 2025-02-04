@@ -211,10 +211,11 @@ body {
 .section {
     max-width: 800px;
     margin: 5px auto;
-    background-color: #5a5a5a;
+    background-color: transparent;  /* Cambiar el color de fondo para que sea transparente */
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0;               /* Eliminar el borde redondeado */
+    box-shadow: none;               /* Eliminar la sombra */
+    color: white;                   /* Asegura que el texto sea visible */
 }
 
 /* Reducción del espacio entre Inicio y Sobre Mí */
