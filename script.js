@@ -102,3 +102,21 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdown.style.display = 'none';
     });
 });
+
+document.getElementById('download-cv').addEventListener('click', function () {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(22);
+    doc.text("Currículum Vitae", 20, 20);
+
+    doc.setFontSize(14);
+    doc.text("Nombre: Alberto Ramírez Farfán", 20, 40);
+    doc.text("Correo: alberto@example.com", 20, 50);
+    doc.text("Teléfono: +34 123 456 789", 20, 60);
+    doc.text("Experiencia:", 20, 80);
+    doc.text("- Desarrollador de Software en proyectos web.", 30, 90);
+    doc.text("- Estudiante de Ingeniería de Software en la Universidad de Oviedo.", 30, 100);
+
+    doc.save('holamundo.pdf');
+});
