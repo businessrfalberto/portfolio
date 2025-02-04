@@ -11,7 +11,7 @@ body {
 .navbar {
     background-color: #333;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -130,8 +130,8 @@ body {
     text-align: center;
     background-color: #4a4a4a;
     color: white;
-    padding: 10px 20px;  /* Reducido aún más el espacio */
-    min-height: 70vh;    /* Altura mínima más pequeña */
+    padding: 10px 20px;
+    min-height: 70vh;
     margin: 0;
 }
 
@@ -172,7 +172,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 5px;  /* Menor espacio superior */
+    margin-top: 5px;
 }
 
 /* Contenedor de cada icono */
@@ -180,7 +180,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;  /* Menor espacio entre icono y texto */
+    gap: 3px;
 }
 
 /* Iconos */
@@ -210,7 +210,7 @@ body {
 /* Otras Secciones */
 .section {
     max-width: 800px;
-    margin: 5px auto;  /* Aún menos espacio entre secciones */
+    margin: 5px auto;
     background-color: #5a5a5a;
     padding: 15px;
     border-radius: 8px;
@@ -219,18 +219,18 @@ body {
 
 /* Reducción del espacio entre Inicio y Sobre Mí */
 #inicio + #sobre-mi {
-    margin-top: 5px;  /* Espacio mínimo */
+    margin-top: 5px;
 }
 
 /* Títulos y Subtítulos */
 h1, h2, p {
-    margin: 3px 0;  /* Espacios más pequeños entre textos */
+    margin: 3px 0;
 }
 
 /* Estilos para pantallas de hasta 768px (móviles y tablets en modo vertical) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Menú de navegación en columna */
+        flex-direction: column;
         padding: 10px;
     }
 
@@ -246,22 +246,22 @@ h1, h2, p {
     }
 
     .nav-links {
-        flex-direction: column; /* Enlaces uno debajo del otro */
+        flex-direction: column;
         gap: 10px;
         padding: 10px 0;
     }
 
     .language-switcher {
-        margin-top: 10px; /* Espacio entre el menú y el selector de idioma */
+        margin-top: 10px;
     }
 
     .hero-content {
-        max-width: 90%;  /* Para que no esté tan ajustado */
+        max-width: 90%;
         padding: 10px;
     }
 
     .dynamic-name {
-        font-size: 32px; /* Texto más pequeño para móviles */
+        font-size: 32px;
     }
 
     .dynamic-text {
@@ -269,7 +269,7 @@ h1, h2, p {
     }
 
     .social-icons {
-        gap: 15px; /* Menos espacio entre iconos */
+        gap: 15px;
     }
 
     .icon-container img {
@@ -278,7 +278,7 @@ h1, h2, p {
     }
 
     .section {
-        margin: 5px 10px; /* Reduce márgenes para mejor uso del espacio */
+        margin: 5px 10px;
         padding: 10px;
     }
 }
