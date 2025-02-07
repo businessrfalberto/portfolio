@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -28,10 +28,10 @@
         <!-- Menú de Navegación -->
         <nav class="nav-menu">
             <ul class="nav-links" id="nav-links">
-                <li><a href="#inicio" data-key="inicio">Inicio</a></li>
+                <li><a href="#inicio" data-key="home">Inicio</a></li>
                 <li><a href="#sobre-mi" data-key="about">Sobre Mí</a></li>
                 <li><a href="#experiencia" data-key="experience">Experiencia</a></li>
-                <li><a href="#proyectos" data-key="projects">Proyectos</a></li>
+                <li><a href="#proyectos" data-key="projects">Proyectos y Habilidades</a></li>
                 <li><a href="#contacto" data-key="contact">Contacto</a></li>
 
             </ul>
@@ -63,57 +63,203 @@
                         </a>
                         <p class="icon-label">GitHub</p>
                     </div>
-                
+
                     <div class="icon-container">
-                        <a href="https://www.linkedin.com/in/alberto-ram%C3%ADrez-farf%C3%A1n-7662381b1" target="_blank">
+                        <a href="https://www.linkedin.com/in/alberto-ram%C3%ADrez-farf%C3%A1n-7662381b1"
+                            target="_blank">
                             <img src="assets/images/linkedin.png" alt="LinkedIn" />
                         </a>
                         <p class="icon-label">LinkedIn</p>
                     </div>
-                
+
                     <div class="icon-container">
                         <a href="https://instagram.com/businessrfalberto" target="_blank">
                             <img src="assets/images/instagram.png" alt="Instagram" />
                         </a>
                         <p class="icon-label">Instagram</p>
                     </div>
-                
+
                     <div class="icon-container">
-                        <a href="assets/docs/holamundo.pdf" target="_blank" download="Curriculum_Alberto_Ramirez_Farfan.pdf">
+                        <a href="assets/docs/holamundo.pdf" target="_blank"
+                            download="Curriculum_Alberto_Ramirez_Farfan.pdf">
                             <img src="assets/images/cv.png" alt="Currículum" />
                         </a>
                         <p class="icon-label">Currículum</p>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
         </section>
 
 
         <section id="sobre-mi" class="section">
             <h2 data-key="about">Sobre Mí</h2>
-            <p data-key="aboutMeText">Contenido sobre mí...</p>
+            <div class="about-card">
+                <div data-key="aboutMeText"></div> <!-- Aquí debería aparecer el texto dinámico -->
+            </div>
         </section>
 
+        <!-- Sección de Experiencia -->
         <section id="experiencia" class="section">
             <h2 data-key="experience">Experiencia</h2>
-            <p data-key="experienceText">Contenido de experiencia...</p>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div data-key="experience1"></div>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div data-key="experience2"></div>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div data-key="experience3"></div>
+                    </div>
+                </div>
+            </div>
         </section>
-        
+
+        <!-- Sección de Proyectos y Habilidades -->
         <section id="proyectos" class="section">
-            <h2 data-key="projects">Proyectos</h2>
-            <p data-key="projectsText">Contenido de proyectos...</p>
+            <h2 data-key="projects">Proyectos y Habilidades</h2>
+
+            <!-- Tarjetas de Proyectos -->
+            <div class="project-card">
+                <img src="assets/images/spain-flag.png" alt="Proyecto 1">
+                <div class="project-description">
+                    <h3>Nombre del Proyecto 1</h3>
+                    <p>Descripción breve del proyecto. Explica qué tecnologías utilizaste y el propósito del proyecto.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project2.png" alt="Proyecto 2">
+                <div class="project-description">
+                    <h3>Nombre del Proyecto 2</h3>
+                    <p>Descripción breve del proyecto. Explica qué tecnologías utilizaste y el propósito del proyecto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Separador animado -->
+            <div class="divider"></div>
+
+            <!-- Habilidades -->
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="assets/images/java.png" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/html.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/css.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/javascript.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/mysql.png" alt="MySql">
+                    <p>MySql</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/csharp.png" alt="csharp">
+                    <p>C#</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/c++.png" alt="C++">
+                    <p>C++</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/python.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/mariadb.png" alt="MariaDB">
+                    <p>MariaDB</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/github.png" alt="GitHub">
+                    <p>GitHub</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/php.png" alt="PHP">
+                    <p>PHP</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/nodejs.jpg" alt="NodeJS">
+                    <p>NodeJS</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/matlab.png" alt="MatLab">
+                    <p>MatLab</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/linux.png" alt="Linux">
+                    <p>Linux</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/wireshark.png" alt="Wireshark">
+                    <p>Wireshark</p>
+                </div>
+                <!-- Puedes añadir más tecnologías aquí -->
+            </div>
         </section>
-        
+
+        <!-- Sección de Contacto -->
         <section id="contacto" class="section">
             <h2 data-key="contact">Contacto</h2>
-            <p data-key="contactText">Contenido de contacto...</p>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="input-group">
+                    <input type="text" data-key="namePlaceholder" placeholder="Nombre Completo" name="from_name" required>
+                    <span class="error-message" data-key="nameError"></span>
+                </div>
+            
+                <div class="input-group">
+                    <input type="email" data-key="emailPlaceholder" placeholder="Email" name="from_email" required>
+                    <span class="error-message" data-key="emailError"></span>
+                </div>
+            
+                <div class="input-group">
+                    <input type="text" data-key="subjectPlaceholder" placeholder="Asunto" name="subject" required>
+                    <span class="error-message" data-key="subjectError"></span>
+                </div>
+            
+                <div class="input-group">
+                    <textarea data-key="messagePlaceholder" placeholder="Mensaje" name="message" rows="6" required></textarea>
+                    <span class="error-message" data-key="messageError"></span>
+                </div>
+            
+                <button type="submit" data-key="sendButton">Enviar</button>
+            </form>
+            
         </section>
         
+
+
+        <footer class="footer">
+            <p data-key="footerCopyright">© 2025 Alberto Ramírez Farfán. Todos los derechos reservados.</p>
+            <p>
+                <span data-key="footerPhone">☎ +34 687 27 84 21</span><br>
+                <span data-key="footerEmail">✉ <a
+                        href="mailto:businessrfalberto@gmail.com">businessrfalberto@gmail.com</a></span>
+            </p>
+        </footer>
+
+
     </main>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -122,7 +268,7 @@
             inicioSection.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
-    
+
 </body>
 
 </html>
