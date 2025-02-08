@@ -34,7 +34,7 @@ body::before {
 .navbar {
     background-color: #333;
     color: white;
-    padding: 50px 20px;  /* Reducido el padding para acercar al inicio */
+    padding: 40px 20px;  /* Reducido el padding para acercar al inicio */
     position: sticky;
     top: 0;
     z-index: 1000;

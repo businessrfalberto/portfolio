@@ -2,11 +2,22 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portafolio - Alberto Ramírez Farfán</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHM3TZG4ZH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KHM3TZG4ZH');
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -219,30 +230,32 @@
             <h2 data-key="contact">Contacto</h2>
             <form class="contact-form" id="contactForm" novalidate>
                 <div class="input-group">
-                    <input type="text" data-key="namePlaceholder" placeholder="Nombre Completo" name="from_name" required>
+                    <input type="text" data-key="namePlaceholder" placeholder="Nombre Completo" name="from_name"
+                        required>
                     <span class="error-message" data-key="nameError"></span>
                 </div>
-            
+
                 <div class="input-group">
                     <input type="email" data-key="emailPlaceholder" placeholder="Email" name="from_email" required>
                     <span class="error-message" data-key="emailError"></span>
                 </div>
-            
+
                 <div class="input-group">
                     <input type="text" data-key="subjectPlaceholder" placeholder="Asunto" name="subject" required>
                     <span class="error-message" data-key="subjectError"></span>
                 </div>
-            
+
                 <div class="input-group">
-                    <textarea data-key="messagePlaceholder" placeholder="Mensaje" name="message" rows="6" required></textarea>
+                    <textarea data-key="messagePlaceholder" placeholder="Mensaje" name="message" rows="6"
+                        required></textarea>
                     <span class="error-message" data-key="messageError"></span>
                 </div>
-            
+
                 <button type="submit" data-key="sendButton">Enviar</button>
             </form>
-            
+
         </section>
-        
+
 
 
         <footer class="footer">
