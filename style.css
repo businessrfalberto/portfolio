@@ -714,3 +714,39 @@ input:focus, textarea:focus {
 .show-error {
     display: block; /* Se muestran cuando hay error */
 }
+
+.about-content {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-pic {
+    width: 120px;            /* Tamaño de la imagen */
+    height: 120px;
+    border-radius: 50%;      /* Imagen redonda */
+    object-fit: cover;       /* Evita deformaciones */
+    display: block;          /* Asegura la correcta visualización */
+    
+    /* Efecto de zoom al pasar el cursor */
+    transition: transform 0.3s ease; 
+}
+
+/* Efecto de zoom al pasar el cursor */
+.profile-pic:hover {
+    transform: scale(1.1);  /* Zoom de 10% */
+}
+
+
+
+.about-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    position: relative;
+    z-index: 10; /* Asegura que la imagen esté por encima de otros elementos */
+}

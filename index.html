@@ -53,6 +53,7 @@
                 <div class="dropdown">
                     <img class="flag" src="assets/images/spain-flag.png" alt="Español" data-lang="es" />
                     <img class="flag" src="assets/images/uk-flag.png" alt="English" data-lang="en" />
+                    <img class="flag" src="assets/images/france-flag.png" alt="Français" data-lang="fr" />
                 </div>
             </div>
         </nav>
@@ -91,12 +92,13 @@
                     </div>
 
                     <div class="icon-container">
-                        <a href="assets/docs/holamundo.pdf" target="_blank"
-                            download="Curriculum_Alberto_Ramirez_Farfan.pdf">
+                        <a id="cv-link" href="assets/docs/Curriculum_Alberto_Ramirez_Farfan_ES.pdf" 
+                           download="CV_es.pdf" target="_blank">
                             <img src="assets/images/cv.png" alt="Currículum" />
                         </a>
-                        <p class="icon-label">Currículum</p>
+                        <p class="icon-label" data-key="cvLabel">Currículum</p>
                     </div>
+                    
 
                 </div>
 
@@ -106,10 +108,19 @@
 
         <section id="sobre-mi" class="section">
             <h2 data-key="about">Sobre Mí</h2>
+            
             <div class="about-card">
-                <div data-key="aboutMeText"></div> <!-- Aquí debería aparecer el texto dinámico -->
+                <!-- Contenedor para la imagen y el texto -->
+                <div class="about-content">
+                    <!-- Imagen a la izquierda -->
+                    <img src="assets/images/me.png" alt="Foto de Alberto" class="profile-pic">
+                    
+                    <!-- Texto a la derecha -->
+                    <div data-key="aboutMeText"></div>
+                </div>
             </div>
         </section>
+        
 
         <!-- Sección de Experiencia -->
         <section id="experiencia" class="section">
@@ -125,11 +136,11 @@
                         <div data-key="experience2"></div>
                     </div>
                 </div>
-                <div class="timeline-item left">
+                <!-- <div class="timeline-item left">
                     <div class="timeline-content">
                         <div data-key="experience3"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -139,20 +150,23 @@
 
             <!-- Tarjetas de Proyectos -->
             <div class="project-card">
-                <img src="assets/images/spain-flag.png" alt="Proyecto 1">
+                <img src="assets/images/project1.png" alt="Proyecto 1">
                 <div class="project-description">
-                    <h3>Nombre del Proyecto 1</h3>
-                    <p>Descripción breve del proyecto. Explica qué tecnologías utilizaste y el propósito del proyecto.
-                    </p>
+                    <div data-key="project1"></div>
                 </div>
             </div>
 
             <div class="project-card">
                 <img src="assets/images/project2.png" alt="Proyecto 2">
                 <div class="project-description">
-                    <h3>Nombre del Proyecto 2</h3>
-                    <p>Descripción breve del proyecto. Explica qué tecnologías utilizaste y el propósito del proyecto.
-                    </p>
+                    <div data-key="project2"></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project3.png" alt="Proyecto 3">
+                <div class="project-description">
+                    <div data-key="project3"></div>
                 </div>
             </div>
 
